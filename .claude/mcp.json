@@ -1,0 +1,54 @@
+{
+  "mcpServers": {
+    "burpsuite": {
+      "command": "node",
+      "args": ["burp-mcp-full/mcp-bridge.js"],
+      "env": {},
+      "disabled": false
+    },
+    "idapro": {
+      "url": "http://127.0.0.1:13337/mcp",
+      "disabled": false
+    },
+    "jshook": {
+      "command": "npx",
+      "args": ["-y", "@jshookmcp/jshook@latest"],
+      "env": {
+        "JSHOOK_BASE_PROFILE": "search"
+      },
+      "disabled": false
+    },
+    "anything-analyzer": {
+      "url": "http://localhost:23816/mcp",
+      "headers": {
+        "Authorization": "Bearer <YOUR_TOKEN_HERE>"
+      },
+      "disabled": true
+    },
+    "ghidra": {
+      "url": "http://127.0.0.1:8765/mcp",
+      "disabled": true
+    },
+    "kali-server": {
+      "command": "kali-server-mcp",
+      "args": ["--port", "5000"],
+      "disabled": true
+    },
+    "metasploit-mcp": {
+      "command": "metasploitmcp",
+      "args": ["--transport", "stdio"],
+      "disabled": true
+    },
+    "hexstrike": {
+      "command": "hexstrike-ai",
+      "args": [],
+      "disabled": true
+    },
+    "pentestswarm": {
+      "command": "pentestswarm",
+      "args": ["mcp", "serve"],
+      "disabled": true
+    }
+  },
+  "globalShortcut": ""
+}
